@@ -1,0 +1,7 @@
+name: VEssentials
+description: Essential commands for vibe market!
+version: 1.0
+main: org.vibemarket.main.Main
+author: ItsCryptic
+commands:
+  discord:
