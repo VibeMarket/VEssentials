@@ -1,0 +1,9 @@
+name: VEssentials
+author: ItsCryptic
+api-version: 1.17
+version: 2.0
+main: me.kevind.main.VEssentials
+commands:
+  autoafk:
+  minaurgay:
+  kevinurgay:
