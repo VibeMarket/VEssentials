@@ -11,7 +11,7 @@ public class ColorsCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
         Player player = (Player)sender;
         if (player.hasPermission("colors.color")) {
-            player.sendMessage(ColorUtils.color("&7Minecraft colors:\n&cMade by ItsCryptic\n") + "$0&0\n$1&1\n$2&2\n$3&3\n$4&4\n$5&5\n$6&6\n$7&7\n$8&8\n$9&9\n$a&a\n$b&b\n$c&c\n$d&d\n$e&e\n$f&f\n\n$r$kNice$r (&k)\n$r$lBold$r (&l)\n$r$mStrike$r (&m)\n$r$nUnderline$r (&n)\n$r$oItalic$r (&o)\n$rReset (&r)");
+            player.sendMessage(ColorUtils.color("&7Minecraft colors:\n&cMade by ItsCryptic\n") + ColorUtils.color$("$0&0\n$1&1\n$2&2\n$3&3\n$4&4\n$5&5\n$6&6\n$7&7\n$8&8\n$9&9\n$a&a\n$b&b\n$c&c\n$d&d\n$e&e\n$f&f\n\n$r$kNice$r (&k)\n$r$lBold$r (&l)\n$r$mStrike$r (&m)\n$r$nUnderline$r (&n)\n$r$oItalic$r (&o)\n$rReset (&r)"));
         } else if (!player.hasPermission("colors.color")) {
             player.sendMessage(ColorUtils.color("&cYou do not have permission to execute this command."));
         }

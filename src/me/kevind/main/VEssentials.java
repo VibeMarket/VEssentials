@@ -1,9 +1,6 @@
 package me.kevind.main;
 
-import me.kevind.commands.AutoAfkCommand;
-import me.kevind.commands.ColorsCommand;
-import me.kevind.commands.KevinUrGayCommand;
-import me.kevind.commands.MinaUrGayCommand;
+import me.kevind.commands.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class VEssentials extends JavaPlugin {
@@ -18,7 +15,9 @@ public class VEssentials extends JavaPlugin {
         getCommand("minaurgay").setExecutor(new MinaUrGayCommand());
         getCommand("autoafk").setExecutor(new AutoAfkCommand());
         getCommand("colors").setExecutor(new ColorsCommand());
-
+        getCommand("discord").setExecutor(new DiscordCommand());
+        getConfig().options().copyDefaults(true);
+        saveConfig();
 
     }
     public void onDisable() {

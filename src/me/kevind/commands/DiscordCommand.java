@@ -1,5 +1,6 @@
 package me.kevind.commands;
 
+import me.kevind.main.VEssentials;
 import me.kevind.utils.ColorUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -10,7 +11,9 @@ public class DiscordCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         Player player = (Player) sender;
-        player.sendMessage(ColorUtils.color("&9&lVibeツ &8» "));
+        String Prefix = VEssentials.getInstance().getConfig().getString("Prefix");
+        String DiscordLink = VEssentials.getInstance().getConfig().getString("DiscordLink");
+        player.sendMessage(ColorUtils.color(Prefix + " &7" + DiscordLink));
         return false;
     }
 
