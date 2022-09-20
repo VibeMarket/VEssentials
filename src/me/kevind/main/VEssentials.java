@@ -16,6 +16,7 @@ public class VEssentials extends JavaPlugin {
         getCommand("autoafk").setExecutor(new AutoAfkCommand());
         getCommand("colors").setExecutor(new ColorsCommand());
         getCommand("discord").setExecutor(new DiscordCommand());
+        getCommand("ping").setExecutor(new PingCommand());
         getConfig().options().copyDefaults(true);
         saveConfig();
 
