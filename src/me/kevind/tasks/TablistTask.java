@@ -14,7 +14,7 @@ import java.util.Date;
 public class TablistTask extends BukkitRunnable {
     @Override
     public void run() {
-        String timeStamp = new SimpleDateFormat("MM/dd/yy").format(Calendar.getInstance().getTime());
+        String timeStamp = new SimpleDateFormat("MMM dd yyyy").format(Calendar.getInstance().getTime());
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.setPlayerListHeaderFooter(ColorUtils.color("&9&lVibe Market\n&7" + timeStamp), ColorUtils.color("&fvibemarket.org"));
         }
