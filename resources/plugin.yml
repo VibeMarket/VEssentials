@@ -1,12 +1,20 @@
 name: VEssentials
 author: ItsCryptic
 api-version: 1.17
-version: 2.0
+version: 2.1
 main: me.kevind.main.VEssentials
 commands:
   autoafk:
+    description: Turn on or off autoafk!
   minaurgay:
+    description: funny command
   kevinurgay:
+    description: funny command
   discord:
+    description: Get a link to our Discord server.
   colors:
+    description: A list of all color codes in Minecraft.
   ping:
+    description: Get yours or someone elses ping!
+  nv:
+    description: Night vision!
