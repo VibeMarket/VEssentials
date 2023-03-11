@@ -1,14 +1,11 @@
 package me.kevind.main;
 
 import me.kevind.commands.*;
+import me.kevind.listeners.ChatListener;
+import me.kevind.listeners.JoinListener;
 import me.kevind.tasks.ActionbarTask;
 import me.kevind.tasks.TablistTask;
-import me.kevind.utils.ColorUtils;
-import org.bukkit.Bukkit;
-import org.bukkit.Server;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
 import java.util.Objects;
@@ -36,7 +33,8 @@ public class VEssentials extends JavaPlugin {
         saveConfig();
         //this is convoluted as hell, but I don't care.
         if (Objects.equals(instance.getConfig().getString("Tablist"), "on")) {
-            BukkitTask tablist = new TablistTask().runTaskAsynchronously(this);
+            getServer().getPluginManager().registerEvents(new JoinListener(), this);
+            getServer().getPluginManager().registerEvents(new ChatListener(), this);
             getLogger().info("Enabling tablist!");
         }else if (Objects.equals(instance.getConfig().getString("Tablist"), "off")) {
             getLogger().info("Not enabling Tablist!");

@@ -22,8 +22,9 @@ public class PingCommand implements CommandExecutor {
             return false;
         }else if (args.length == 1) {
             Player target = Bukkit.getPlayer(args[0]);
+            int targetping = target.getPing();
             if (target != null) {
-                player.sendMessage(ColorUtils.color(VEssentials.getPrefix() + " &9" + target.getDisplayName() + "&7's ping: " + target.getPing() + "ms"));
+                player.sendMessage(ColorUtils.color(VEssentials.getPrefix() + " &9" + target.getDisplayName() + "&7's ping: " + targetping + "ms"));
                 return false;
             }else {
                 player.sendMessage(ColorUtils.color(VEssentials.getPrefix() + " &cThat player is not online!"));

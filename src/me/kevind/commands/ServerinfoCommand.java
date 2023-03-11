@@ -2,13 +2,10 @@ package me.kevind.commands;
 
 import me.kevind.main.VEssentials;
 import me.kevind.utils.ColorUtils;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import static org.bukkit.Bukkit.getServer;
 
 public class ServerinfoCommand implements CommandExecutor {
     @Override

@@ -8,8 +8,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import java.awt.*;
-
 public class ActionbarTask extends BukkitRunnable {
     String serverip = VEssentials.getInstance().getConfig().getString("ServerIP");
     @Override
